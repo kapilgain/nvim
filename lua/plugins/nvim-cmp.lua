@@ -16,6 +16,11 @@ return {
 		end,
 	},
 
+	-- https://github.com/hrsh7th/cmp-nvim-lsp
+	{
+		"hrsh7th/cmp-nvim-lsp",
+	},
+
 	-- https://github.com/hrsh7th/nvim-cmp#setup
 	{
 		"hrsh7th/nvim-cmp",
@@ -46,7 +51,7 @@ return {
 				}),
 
 				sources = cmp.config.sources({
-					-- FIXME { name = "nvim_lsp" },
+					{ name = "nvim_lsp" },
 					-- { name = "vsnip" }, -- For vsnip users.
 					{ name = "luasnip" }, -- For luasnip users.
 					-- { name = 'ultisnips' }, -- For ultisnips users.

@@ -34,7 +34,13 @@ return {
     config = function()
       -- Setup language servers.
       local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup({})
+
+      -- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
+      local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+      lspconfig.lua_ls.setup({
+        capabilities = capabilities,
+      })
 
       -- Global mappings.
       -- See `:help vim.diagnostic.*` for documentation on any of the below functions
