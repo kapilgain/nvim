@@ -1,10 +1,10 @@
 -- https://github.com/catppuccin/nvim#usage
-return { 
+return {
   "catppuccin/nvim",
   name = "catppuccin",
   priority = 1000,
   config = function()
     -- https://github.com/catppuccin/nvim#usage
-    vim.cmd.colorscheme "catppuccin"
+    vim.cmd.colorscheme("catppuccin")
   end,
 }
