@@ -22,6 +22,18 @@ local plugins = {
   -- https://github.com/catppuccin/nvim#configuration
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
+  -- https://github.com/nvim-neo-tree/neo-tree.nvim#minimal-quickstart
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+      -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+    }
+  },
+
   -- https://github.com/nvim-telescope/telescope.nvim#installation
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.5',
@@ -39,6 +51,8 @@ require("lazy").setup(plugins, opts)
 
 -- https://github.com/catppuccin/nvim#configuration
 vim.cmd.colorscheme "catppuccin"
+
+vim.keymap.set('n', '<leader>n', '<cmd>Neotree<CR>', {})
 
 -- https://github.com/nvim-telescope/telescope.nvim#usage
 local builtin = require('telescope.builtin')
