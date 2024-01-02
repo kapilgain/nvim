@@ -26,6 +26,7 @@ return {
 
         -- Python
         "black",
+        "isort",
         "mypy",
         "pyright",
         "ruff",
