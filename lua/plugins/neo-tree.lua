@@ -8,6 +8,7 @@ return {
     "MunifTanjim/nui.nvim",
     -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
   },
+  event = "VeryLazy",
   config = function()
     vim.keymap.set("n", "<leader>n", "<cmd>Neotree<CR>", { desc = "Open NeoTree" })
   end,

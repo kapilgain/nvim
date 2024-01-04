@@ -6,6 +6,7 @@ return {
     -- or
     -- branch = '0.1.x',
     dependencies = { "nvim-lua/plenary.nvim" },
+    event = "VeryLazy",
     config = function()
       -- https://github.com/nvim-telescope/telescope.nvim#usage
       local builtin = require("telescope.builtin")
@@ -16,6 +17,8 @@ return {
       vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Help tags" })
       vim.keymap.set("n", "<leader>fo", builtin.oldfiles, { desc = "Old files" })
       vim.keymap.set("n", "<leader>fc", builtin.commands, { desc = "Commands" })
+      vim.keymap.set("n", "<leader>gc", builtin.git_commits, { desc = "Git commits" })
+      vim.keymap.set("n", "<leader>gt", builtin.git_status, { desc = "Git status" })
     end,
   },
 
@@ -23,6 +26,7 @@ return {
   {
     "nvim-telescope/telescope-ui-select.nvim",
     -- https://github.com/nvim-telescope/telescope-ui-select.nvim#telescope-setup-and-configuration
+    event = "VeryLazy",
     config = function()
       -- This is your opts table
       require("telescope").setup({

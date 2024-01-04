@@ -4,6 +4,7 @@ return {
   {
     "williamboman/mason.nvim",
     -- https://github.com/williamboman/mason.nvim#setup
+    event = "VeryLazy",
     config = true,
   },
 
@@ -11,6 +12,7 @@ return {
   {
     "williamboman/mason-lspconfig.nvim",
     -- https://github.com/williamboman/mason-lspconfig.nvim#configuration
+    event = "VeryLazy",
     config = true,
   },
 
@@ -18,6 +20,7 @@ return {
   {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     -- https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim#configuration
+    event = "VeryLazy",
     opts = {
       ensure_installed = {
         -- Lua
@@ -38,6 +41,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     -- https://github.com/neovim/nvim-lspconfig#suggested-configuration
+    event = "VeryLazy",
     config = function()
       -- Setup language servers.
       local lspconfig = require("lspconfig")

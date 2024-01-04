@@ -2,6 +2,7 @@
 return {
   "nvim-treesitter/nvim-treesitter",
   build = ":TSUpdate",
+  event = "VeryLazy",
   config = function()
     -- https://github.com/nvim-treesitter/nvim-treesitter#modules
     require("nvim-treesitter.configs").setup({

@@ -2,6 +2,7 @@
 return {
   "nvimtools/none-ls.nvim",
   -- https://github.com/nvimtools/none-ls.nvim#setup
+  event = "VeryLazy",
   config = function()
     local null_ls = require("null-ls")
 

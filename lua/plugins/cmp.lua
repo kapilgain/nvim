@@ -11,6 +11,7 @@ return {
       -- https://github.com/rafamadriz/friendly-snippets#with-lazynvim
       "rafamadriz/friendly-snippets",
     },
+    event = "VeryLazy",
     config = function()
       require("luasnip.loaders.from_vscode").lazy_load()
     end,
@@ -19,11 +20,13 @@ return {
   -- https://github.com/hrsh7th/cmp-nvim-lsp
   {
     "hrsh7th/cmp-nvim-lsp",
+    event = "VeryLazy",
   },
 
   -- https://github.com/hrsh7th/nvim-cmp#setup
   {
     "hrsh7th/nvim-cmp",
+    event = "VeryLazy",
     config = function()
       local cmp = require("cmp")
       cmp.setup({
@@ -66,5 +69,6 @@ return {
   -- https://github.com/saadparwaiz1/cmp_luasnip
   {
     "saadparwaiz1/cmp_luasnip",
+    event = "VeryLazy",
   },
 }
