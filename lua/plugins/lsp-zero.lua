@@ -22,7 +22,7 @@ return {
   {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     -- https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim#configuration
-    lazy = true,
+    lazy = false,
     opts = {
       ensure_installed = {
         -- Lua
