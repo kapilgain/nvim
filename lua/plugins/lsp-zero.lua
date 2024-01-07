@@ -35,6 +35,11 @@ return {
         "mypy",
         "pyright",
         "ruff",
+
+        -- Yaml
+        "yamlfix",
+        "yamllint",
+        "yamlls",
       },
     },
   },
@@ -100,6 +105,7 @@ return {
             local lspconfig = require("lspconfig")
             lspconfig.lua_ls.setup(lsp_zero.nvim_lua_ls())
             lspconfig.pyright.setup({})
+            lspconfig.yamlls.setup({})
           end,
         },
       })

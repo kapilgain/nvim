@@ -16,6 +16,10 @@ return {
         null_ls.builtins.diagnostics.ruff,
         null_ls.builtins.formatting.black,
         null_ls.builtins.formatting.isort,
+
+        -- Yaml
+        null_ls.builtins.diagnostics.yamllint,
+        null_ls.builtins.formatting.yamlfix,
       },
     })
 
