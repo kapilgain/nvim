@@ -93,7 +93,9 @@ return {
       lsp_zero.on_attach(function(_, bufnr)
         -- see :help lsp-zero-keybindings
         -- to learn the available actions
-        lsp_zero.default_keymaps({ buffer = bufnr })
+        -- https://github.com/VonHeikemen/lsp-zero.nvim#keybindings
+        lsp_zero.default_keymaps({ buffer = bufnr, preserve_mappings = false })
+        vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename" })
       end)
 
       require("mason-lspconfig").setup({
