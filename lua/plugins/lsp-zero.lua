@@ -31,6 +31,7 @@ return {
 
         -- Python
         "black",
+        "debugpy",
         "isort",
         "mypy",
         "pyright",
