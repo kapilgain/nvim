@@ -25,6 +25,11 @@ return {
     lazy = false,
     opts = {
       ensure_installed = {
+        -- Java
+        "checkstyle",
+        "google-java-format",
+        "jdtls",
+
         -- Lua
         "lua_ls",
         "stylua",
@@ -107,9 +112,9 @@ return {
             -- (Optional) Configure lua language server for neovim
             local lspconfig = require("lspconfig")
             lspconfig.lua_ls.setup(lsp_zero.nvim_lua_ls())
-            lspconfig.pyright.setup({})
-            lspconfig.yamlls.setup({})
           end,
+          -- https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/setup-with-nvim-jdtls.md
+          jdtls = lsp_zero.noop,
         },
       })
     end,

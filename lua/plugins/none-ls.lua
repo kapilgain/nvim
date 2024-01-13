@@ -7,7 +7,15 @@ return {
     local null_ls = require("null-ls")
 
     null_ls.setup({
+      -- https://github.com/nvimtools/none-ls.nvim/blob/main/doc/BUILTINS.md
       sources = {
+        -- Java
+        null_ls.builtins.diagnostics.checkstyle.with({
+          -- https://github.com/nvimtools/none-ls.nvim/blob/main/doc/BUILTINS.md#checkstyle
+          extra_args = { "-c", "/google_checks.xml" },
+        }),
+        null_ls.builtins.formatting.google_java_format,
+
         -- Lua
         null_ls.builtins.formatting.stylua,
 
