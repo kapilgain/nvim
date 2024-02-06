@@ -26,7 +26,8 @@ return {
     opts = {
       ensure_installed = {
         -- C#
-        "omnisharp",
+        -- https://github.com/OmniSharp/omnisharp-roslyn/issues/2574#issuecomment-1757317407
+        { "omnisharp", version = "v1.39.8" },
 
         -- Java
         "checkstyle",
@@ -92,6 +93,8 @@ return {
     dependencies = {
       { "hrsh7th/cmp-nvim-lsp" },
       { "williamboman/mason-lspconfig.nvim" },
+      -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#omnisharp
+      { "Hoffs/omnisharp-extended-lsp.nvim" },
     },
     -- https://github.com/VonHeikemen/lsp-zero.nvim#usage
     config = function()
@@ -112,13 +115,22 @@ return {
         ensure_installed = {},
         handlers = {
           lsp_zero.default_setup,
+          -- https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/setup-with-nvim-jdtls.md
+          jdtls = lsp_zero.noop,
           lua_ls = function()
             -- (Optional) Configure lua language server for neovim
             local lspconfig = require("lspconfig")
             lspconfig.lua_ls.setup(lsp_zero.nvim_lua_ls())
           end,
-          -- https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/setup-with-nvim-jdtls.md
-          jdtls = lsp_zero.noop,
+          -- https://spaceandtim.es/code/nvim_unity_setup/
+          omnisharp = function()
+            require("lspconfig").omnisharp.setup({
+              handlers = {
+                -- https://github.com/Hoffs/omnisharp-extended-lsp.nvim?tab=readme-ov-file#omnisharp-settings
+                ["textDocument/definition"] = require("omnisharp_extended").handler,
+              },
+            })
+          end,
         },
       })
     end,
