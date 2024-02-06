@@ -25,6 +25,9 @@ return {
     lazy = false,
     opts = {
       ensure_installed = {
+        -- C#
+        "omnisharp",
+
         -- Java
         "checkstyle",
         "google-java-format",
@@ -104,6 +107,7 @@ return {
         vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename" })
       end)
 
+      -- https://github.com/VonHeikemen/lsp-zero.nvim?tab=readme-ov-file#automatic-setup-of-language-servers
       require("mason-lspconfig").setup({
         ensure_installed = {},
         handlers = {
