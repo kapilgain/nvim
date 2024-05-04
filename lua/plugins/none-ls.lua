@@ -2,6 +2,10 @@
 return {
   "nvimtools/none-ls.nvim",
   -- https://github.com/nvimtools/none-ls.nvim#setup
+  dependencies = {
+    -- https://github.com/nvimtools/none-ls-extras.nvim?tab=readme-ov-file#lazynvim
+    "nvimtools/none-ls-extras.nvim",
+  },
   event = "VeryLazy",
   config = function()
     local null_ls = require("null-ls")
@@ -21,13 +25,15 @@ return {
 
         -- Python
         null_ls.builtins.diagnostics.mypy,
-        null_ls.builtins.diagnostics.ruff,
+        -- https://github.com/nvimtools/none-ls-extras.nvim?tab=readme-ov-file#setup
+        require("none-ls.diagnostics.ruff"),
         null_ls.builtins.formatting.black,
         null_ls.builtins.formatting.isort,
 
         --Typescript
-        null_ls.builtins.diagnostics.eslint_d,
-        null_ls.builtins.formatting.prettierd,
+        -- https://github.com/nvimtools/none-ls-extras.nvim?tab=readme-ov-file#setup
+        require("none-ls.diagnostics.eslint_d"),
+        require("none-ls.formatting.prettierd"),
 
         -- Yaml
         null_ls.builtins.diagnostics.yamllint,
