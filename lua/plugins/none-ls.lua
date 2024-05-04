@@ -25,6 +25,10 @@ return {
         null_ls.builtins.formatting.black,
         null_ls.builtins.formatting.isort,
 
+        --Typescript
+        null_ls.builtins.diagnostics.eslint_d,
+        null_ls.builtins.formatting.prettierd,
+
         -- Yaml
         null_ls.builtins.diagnostics.yamllint,
         null_ls.builtins.formatting.yamlfix,

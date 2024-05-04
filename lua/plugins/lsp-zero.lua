@@ -46,6 +46,11 @@ return {
         "pyright",
         "ruff",
 
+        -- Typescript
+        "eslint_d",
+        "prettierd",
+        "tsserver",
+
         -- Yaml
         "yamlfix",
         "yamllint",
