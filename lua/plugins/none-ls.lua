@@ -33,7 +33,7 @@ return {
         --Typescript
         -- https://github.com/nvimtools/none-ls-extras.nvim?tab=readme-ov-file#setup
         require("none-ls.diagnostics.eslint_d"),
-        require("none-ls.formatting.prettierd"),
+        null_ls.formatting.prettierd,
 
         -- Yaml
         null_ls.builtins.diagnostics.yamllint,
