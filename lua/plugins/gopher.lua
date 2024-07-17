@@ -2,7 +2,7 @@
 -- https://github.com/olexsmir/gopher.nvim
 return {
   "olexsmir/gopher.nvim",
-  ft = "go",
+  ft = {"go", "gomod"},
   -- branch = "develop", -- if you want develop branch
   -- keep in mind, it might break everything
   dependencies = {
