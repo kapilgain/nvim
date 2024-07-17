@@ -29,6 +29,13 @@ return {
         -- https://github.com/OmniSharp/omnisharp-roslyn/issues/2574#issuecomment-1757317407
         { "omnisharp", version = "v1.39.8" },
 
+        -- Go
+        "delve",
+        "goimports-reviser",
+        "gofumpt",
+        "golines",
+        "gopls",
+
         -- Java
         "checkstyle",
         "google-java-format",
@@ -120,6 +127,19 @@ return {
         ensure_installed = {},
         handlers = {
           lsp_zero.default_setup,
+          -- https://www.youtube.com/watch?v=i04sSQjd-qo
+          gopls = function()
+            require("lspconfig").gopls.setup({
+              settings = {
+                gopls = {
+                  -- usePlaceholders = true,
+                  analyses = {
+                    unusedparams = true,
+                  },
+                },
+              },
+            })
+          end,
           -- https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/setup-with-nvim-jdtls.md
           jdtls = lsp_zero.noop,
           lua_ls = function()

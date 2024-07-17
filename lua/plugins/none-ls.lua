@@ -13,6 +13,11 @@ return {
     null_ls.setup({
       -- https://github.com/nvimtools/none-ls.nvim/blob/main/doc/BUILTINS.md
       sources = {
+        -- Go
+        null_ls.builtins.formatting.gofumpt,
+        null_ls.builtins.formatting.goimports_reviser,
+        null_ls.builtins.formatting.golines,
+
         -- Java
         null_ls.builtins.diagnostics.checkstyle.with({
           -- https://github.com/nvimtools/none-ls.nvim/blob/main/doc/BUILTINS.md#checkstyle

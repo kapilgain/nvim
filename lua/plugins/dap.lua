@@ -42,6 +42,13 @@ return {
     end,
   },
   {
+    "leoluz/nvim-dap-go",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+    },
+    ft = "go",
+  },
+  {
     "mfussenegger/nvim-dap-python",
     dependencies = {
       "mfussenegger/nvim-dap",
