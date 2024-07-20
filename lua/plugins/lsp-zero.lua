@@ -36,6 +36,9 @@ return {
         "golines",
         "gopls",
 
+        -- HTML and CSS
+        "emmet-language-server",
+
         -- Java
         "checkstyle",
         "google-java-format",
