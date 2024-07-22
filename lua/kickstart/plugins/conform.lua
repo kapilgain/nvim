@@ -25,13 +25,12 @@ return {
         }
       end,
       formatters_by_ft = {
+        -- Conform can also run multiple formatters sequentially
         go = { "gofumpt", "goimports-reviser", "golines" },
         java = { "checkstyle", "google-java-format" },
-        -- You can use a sub-list to tell conform to run *until* a formatter
-        -- is found.
-        javascript = { { "prettierd", "prettier" }, "eslint_d" },
+        javascript = { "prettierd", "eslint_d" },
+        json = { "prettierd", "eslint_d" },
         lua = { "stylua" },
-        -- Conform can also run multiple formatters sequentially
         python = { "ruff", "isort", "black", "mypy" },
         yaml = { "yamlfix", "yamllint" },
       },

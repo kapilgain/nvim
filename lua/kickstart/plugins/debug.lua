@@ -23,6 +23,7 @@ return {
 
     -- Add your own debuggers here
     "leoluz/nvim-dap-go",
+    "mfussenegger/nvim-dap-python",
   },
   config = function()
     local dap = require("dap")
@@ -31,7 +32,7 @@ return {
     require("mason-nvim-dap").setup({
       -- Makes a best effort to setup the various debuggers with
       -- reasonable debug configurations
-      automatic_installation = true,
+      automatic_installation = false,
 
       -- You can provide additional configuration to the handlers,
       -- see mason-nvim-dap README for more information
@@ -40,8 +41,10 @@ return {
       -- You'll need to check that you have the required things installed
       -- online, please don't ask me how to install them :)
       ensure_installed = {
+        -- WARN: Add in lspconfig.lua instead, otherwise :MasonToolsClean removes these debuggers
+
         -- Update this to ensure that you have the debuggers for the langs you want
-        "delve",
+        -- "delve",
       },
     })
 
@@ -81,8 +84,8 @@ return {
     vim.keymap.set("n", "<F7>", dapui.toggle, { desc = "Debug: See last session result." })
 
     dap.listeners.after.event_initialized["dapui_config"] = dapui.open
-    dap.listeners.before.event_terminated["dapui_config"] = dapui.close
-    dap.listeners.before.event_exited["dapui_config"] = dapui.close
+    -- dap.listeners.before.event_terminated["dapui_config"] = dapui.close
+    -- dap.listeners.before.event_exited["dapui_config"] = dapui.close
 
     -- Install golang specific config
     require("dap-go").setup({
@@ -92,5 +95,8 @@ return {
         detached = vim.fn.has("win32") == 0,
       },
     })
+
+    -- Install python specific config
+    require("dap-python").setup()
   end,
 }
