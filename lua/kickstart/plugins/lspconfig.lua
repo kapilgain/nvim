@@ -182,7 +182,7 @@ return {
         emmet_language_server = {},
 
         -- Java
-        jdtls = {},
+        -- jdtls = {}, -- Configure jdtls manually via after/ftplugin/java.lua
 
         -- Lua
         lua_ls = {
@@ -242,6 +242,7 @@ return {
         -- Java
         "checkstyle",
         "google-java-format",
+        "jdtls",
 
         -- Lua
         "stylua", -- Used to format Lua code
@@ -266,6 +267,10 @@ return {
       require("mason-lspconfig").setup({
         handlers = {
           function(server_name)
+            if server_name == "jdtls" then
+              -- Configure jdtls manually via after/ftplugin/java.lua
+              return
+            end
             local server = servers[server_name] or {}
             -- This handles overriding only values explicitly passed
             -- by the server configuration above. Useful when disabling
