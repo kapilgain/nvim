@@ -1,3 +1,12 @@
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#jinja_lsp
+vim.filetype.add({
+  extension = {
+    jinja = "jinja",
+    jinja2 = "jinja",
+    j2 = "jinja",
+  },
+})
+
 return {
   { -- LSP Configuration & Plugins
     "neovim/nvim-lspconfig",
@@ -185,7 +194,12 @@ return {
         -- jdtls = {}, -- Configure jdtls manually via after/ftplugin/java.lua
 
         -- Jinja
-        jinja_lsp = {},
+        -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#jinja_lsp
+        jinja_lsp = {
+          settings = {
+            filetypes = { "jinja" },
+          },
+        },
 
         -- Lua
         lua_ls = {
