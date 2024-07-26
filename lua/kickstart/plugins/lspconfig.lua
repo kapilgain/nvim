@@ -188,18 +188,12 @@ return {
         },
 
         -- HTML and CSS
-        emmet_language_server = {},
+        emmet_language_server = {
+          filetypes = { "html", "jinja" },
+        },
 
         -- Java
         -- jdtls = {}, -- Configure jdtls manually via after/ftplugin/java.lua
-
-        -- Jinja
-        -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#jinja_lsp
-        jinja_lsp = {
-          settings = {
-            filetypes = { "jinja" },
-          },
-        },
 
         -- Lua
         lua_ls = {

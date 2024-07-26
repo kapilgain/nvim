@@ -1,3 +1,6 @@
+-- https://github.com/nvim-treesitter/nvim-treesitter/#adding-parsers
+vim.treesitter.language.register("html", "jinja")
+
 return {
   { -- Highlight, edit, and navigate code
     "nvim-treesitter/nvim-treesitter",
