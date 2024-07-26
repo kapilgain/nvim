@@ -254,7 +254,7 @@ return {
         "mypy",
         "ruff",
 
-        -- Typescript
+        -- Web
         "eslint_d",
         "prettierd",
 
