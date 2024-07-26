@@ -30,7 +30,7 @@ return {
         java = { "checkstyle", "google-java-format" },
         javascript = { "prettierd", "eslint_d" },
         json = { "prettierd", "eslint_d" },
-        html = { "prettierd", "eslint_d" },
+        html = { "djlint" },
         lua = { "stylua" },
         python = { "ruff", "isort", "black" },
         yaml = { "yamlfix", "yamllint" },

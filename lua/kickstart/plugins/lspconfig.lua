@@ -184,6 +184,9 @@ return {
         -- Java
         -- jdtls = {}, -- Configure jdtls manually via after/ftplugin/java.lua
 
+        -- Jinja
+        jinja_lsp = {},
+
         -- Lua
         lua_ls = {
           -- cmd = {...},
@@ -243,6 +246,9 @@ return {
         "checkstyle",
         "google-java-format",
         "jdtls",
+
+        -- Jinja
+        "djlint",
 
         -- Lua
         "stylua", -- Used to format Lua code
