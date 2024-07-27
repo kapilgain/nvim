@@ -31,6 +31,7 @@ return {
         javascript = { "prettierd", "eslint_d" },
         jinja = { "djlint" },
         json = { "prettierd", "eslint_d" },
+        html = { "prettierd" },
         lua = { "stylua" },
         python = { "ruff", "isort", "black" },
         yaml = { "yamlfix", "yamllint" },
