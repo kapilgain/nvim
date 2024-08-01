@@ -49,13 +49,14 @@ require("lazy").setup({
 
   require("kickstart/plugins/treesitter"),
 
-  require("kickstart.plugins.catppuccin"),
-  require("kickstart.plugins.lualine"),
-  { "github/copilot.vim", cmd = { "Copilot" } },
-  require("kickstart.plugins.gopher"),
+  "mechatroner/rainbow_csv",
   "mfussenegger/nvim-jdtls",
-  require("kickstart.plugins.trouble"),
+  require("kickstart.plugins.catppuccin"),
+  require("kickstart.plugins.gopher"),
+  require("kickstart.plugins.lualine"),
   require("kickstart.plugins.neorg"),
+  require("kickstart.plugins.trouble"),
+  { "github/copilot.vim", cmd = { "Copilot" } },
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
