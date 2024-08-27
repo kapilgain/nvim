@@ -26,6 +26,7 @@ return {
       end,
       formatters_by_ft = {
         -- Conform can also run multiple formatters sequentially
+        c = { "clang-format" },
         go = { "gofumpt", "goimports-reviser", "golines" },
         java = { "google-java-format" },
         javascript = { "prettierd", "eslint_d" },
