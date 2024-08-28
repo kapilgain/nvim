@@ -250,7 +250,7 @@ return {
 
         -- C#
         -- https://github.com/OmniSharp/omnisharp-roslyn/issues/2574#issuecomment-1757317407
-        { "omnisharp", version = "v1.39.8" },
+        { "omnisharp" },
 
         -- Go
         "delve",
