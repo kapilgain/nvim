@@ -247,6 +247,7 @@ return {
       vim.list_extend(ensure_installed, {
         -- C/C++
         "clang-format",
+        "cpplint",
 
         -- C#
         -- https://github.com/OmniSharp/omnisharp-roslyn/issues/2574#issuecomment-1757317407

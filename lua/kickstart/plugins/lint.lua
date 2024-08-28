@@ -12,6 +12,7 @@ return {
       -- To allow other plugins to add linters to require('lint').linters_by_ft,
       -- instead set linters_by_ft like this:
       lint.linters_by_ft = lint.linters_by_ft or {}
+      lint.linters_by_ft["cpp"] = { "cpplint" }
       lint.linters_by_ft["html"] = { "htmlhint" }
       lint.linters_by_ft["java"] = { "checkstyle" }
       lint.linters_by_ft["jinja"] = { "djlint" }
