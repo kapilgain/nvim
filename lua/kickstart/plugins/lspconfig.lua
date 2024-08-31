@@ -247,6 +247,7 @@ return {
       vim.list_extend(ensure_installed, {
         -- C/C++
         "clang-format",
+        "codelldb",
         "cpplint",
 
         -- C#
