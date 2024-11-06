@@ -12,7 +12,7 @@ return {
     "BufReadPre "
       .. vim.fn.expand("~")
       .. "/vaults/personal/*.md",
-    "BufNewFile " .. vim.fn.expand("~") .. "/vaults/work/*.md",
+    "BufNewFile " .. vim.fn.expand("~") .. "/vaults/personal/*.md",
   },
   dependencies = {
     -- Required.
@@ -30,10 +30,10 @@ return {
         name = "personal",
         path = "~/vaults/personal",
       },
-      {
-        name = "work",
-        path = "~/vaults/work",
-      },
+      -- {
+      --   name = "work",
+      --   path = "~/vaults/work",
+      -- },
     },
 
     -- see below for full list of options 👇
