@@ -56,6 +56,7 @@ require("lazy").setup({
   require("kickstart.plugins.gopher"),
   require("kickstart.plugins.lualine"),
   require("kickstart.plugins.neorg"),
+  require("kickstart.plugins.obsidian"),
   require("kickstart.plugins.trouble"),
   { "github/copilot.vim", cmd = { "Copilot" } },
 

@@ -271,6 +271,9 @@ return {
         -- JSON
         "jsonlint",
 
+        -- Markdown
+        "markdownlint",
+
         -- Lua
         "stylua", -- Used to format Lua code
 

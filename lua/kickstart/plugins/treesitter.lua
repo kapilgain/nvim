@@ -16,6 +16,8 @@ return {
         "lua",
         "luadoc",
         "markdown",
+        --https://github.com/epwalsh/obsidian.nvim?tab=readme-ov-file#syntax-highlighting
+        "markdown_inline",
         "python",
         "vim",
         "vimdoc",
