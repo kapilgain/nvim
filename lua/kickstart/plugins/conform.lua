@@ -28,6 +28,7 @@ return {
         -- Conform can also run multiple formatters sequentially
         c = { "clang-format" },
         cpp = { "clang-format" },
+        css = { "prettierd" },
         go = { "gofumpt", "goimports-reviser", "golines" },
         java = { "google-java-format" },
         javascript = { "prettierd", "eslint_d" },
