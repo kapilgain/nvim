@@ -18,6 +18,7 @@ return {
       lint.linters_by_ft["jinja"] = { "djlint" }
       lint.linters_by_ft["markdown"] = { "markdownlint" }
       lint.linters_by_ft["python"] = { "mypy" }
+      lint.linters_by_ft["tex"] = { "vale" }
       lint.linters_by_ft["yaml"] = { "yamllint" }
       --
       -- However, note that this will enable a set of default linters,
