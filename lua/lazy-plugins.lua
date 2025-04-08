@@ -53,7 +53,7 @@ require("lazy").setup({
   "mechatroner/rainbow_csv",
   "mfussenegger/nvim-jdtls",
   require("kickstart.plugins.catppuccin"),
-  require("kickstart.plugins.gopher"),
+  -- require("kickstart.plugins.gopher"),
   require("kickstart.plugins.lualine"),
   require("kickstart.plugins.neorg"),
   require("kickstart.plugins.obsidian"),
