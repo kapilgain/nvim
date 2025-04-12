@@ -9,7 +9,8 @@ local config = {
       configuration = {
         runtimes = {
           {
-            name = "JavaSE-8",
+            -- https://github.com/emacs-lsp/lsp-java/issues/254#issuecomment-666334958
+            name = "JavaSE-1.8",
             path = vim.fn.expand("$HOME") .. "/.sdkman/candidates/java/8.0.392-zulu",
           },
         },
