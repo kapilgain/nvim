@@ -87,6 +87,17 @@ return {
     -- dap.listeners.before.event_terminated["dapui_config"] = dapui.close
     -- dap.listeners.before.event_exited["dapui_config"] = dapui.close
 
+    -- https://github.com/mfussenegger/nvim-dap/wiki/Java#configuration
+    dap.configurations.java = {
+      {
+        type = "java",
+        request = "attach",
+        name = "Debug (Attach) - Remote",
+        hostName = "127.0.0.1",
+        port = 56789,
+      },
+    }
+
     -- Install golang specific config
     require("dap-go").setup({
       delve = {

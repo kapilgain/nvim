@@ -267,6 +267,7 @@ return {
         -- Java
         "checkstyle",
         "google-java-format",
+        "java-debug-adapter",
         "jdtls",
 
         -- Jinja
