@@ -255,8 +255,9 @@ return {
         "cpplint",
 
         -- C#
+        "netcoredbg",
         -- https://github.com/OmniSharp/omnisharp-roslyn/issues/2574#issuecomment-1757317407
-        { "omnisharp" },
+        "omnisharp",
 
         -- Go
         "delve",

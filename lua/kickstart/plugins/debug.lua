@@ -87,6 +87,26 @@ return {
     -- dap.listeners.before.event_terminated["dapui_config"] = dapui.close
     -- dap.listeners.before.event_exited["dapui_config"] = dapui.close
 
+    -- Install dotnet specific config
+    -- https://codeberg.org/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation#dotnet
+    dap.adapters.coreclr = {
+      type = "executable",
+      command = vim.fn.stdpath("data") .. "/mason/bin/netcoredbg",
+      args = { "--interpreter=vscode" },
+    }
+
+    dap.configurations.cs = {
+      {
+        type = "coreclr",
+        name = "launch - netcoredbg",
+        request = "launch",
+        program = function()
+          return vim.fn.input("Path to dll", vim.fn.getcwd() .. "/bin/Debug/", "file")
+        end,
+      },
+    }
+
+    -- Install java specific config
     -- https://github.com/mfussenegger/nvim-dap/wiki/Java#configuration
     dap.configurations.java = {
       {
