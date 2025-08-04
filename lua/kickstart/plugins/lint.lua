@@ -57,6 +57,10 @@ return {
           lint.try_lint()
         end,
       })
+
+      vim.api.nvim_create_user_command("LinterInfo", function()
+        print((require("lint").linters_by_ft[vim.bo.filetype] or { nil })[1])
+      end, {})
     end,
   },
 }
