@@ -12,7 +12,7 @@ return {
     -- https://github.com/folke/trouble.nvim#commands
     -- Lua
     vim.keymap.set("n", "<leader>xx", function()
-      require("trouble").toggle()
+      require("trouble").toggle("diagnostics")
     end, { desc = "Trouble: Toggle" })
     vim.keymap.set("n", "<leader>xw", function()
       require("trouble").toggle("workspace_diagnostics")
