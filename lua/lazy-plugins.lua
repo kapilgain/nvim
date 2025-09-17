@@ -33,6 +33,8 @@ require("lazy").setup({
 
   require("kickstart/plugins/which-key"),
 
+  require("kickstart.plugins.cloak"),
+
   require("kickstart/plugins/telescope"),
 
   require("kickstart/plugins/lspconfig"),
