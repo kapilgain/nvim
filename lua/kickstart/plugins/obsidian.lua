@@ -21,7 +21,7 @@ return {
     -- see below for full list of optional dependencies 👇
     -- https://github.com/epwalsh/obsidian.nvim?tab=readme-ov-file#plugin-dependencies
     "hrsh7th/nvim-cmp",
-    "nvim-telescope/telescope.nvim",
+    -- "nvim-telescope/telescope.nvim",
     "nvim-treesitter",
   },
   opts = {
