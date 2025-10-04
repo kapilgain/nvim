@@ -37,6 +37,7 @@ return {
         html = { "prettierd" },
         lua = { "stylua" },
         python = { "ruff", "isort", "black" },
+        rust = { "rustfmt" },
         tex = { "tex-fmt" },
         yaml = { "yamlfix" },
       },
