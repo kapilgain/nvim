@@ -105,6 +105,11 @@ require("lazy").setup({
       lazy = "💤 ",
     },
   },
+  -- https://www.reddit.com/r/neovim/comments/1nw8luw/comment/nhiwf2p/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
+  rocks = {
+    enabled = false,
+    hererocks = false,
+  },
 })
 
 -- vim: ts=2 sts=2 sw=2 et
