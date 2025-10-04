@@ -57,10 +57,11 @@ require("lazy").setup({
   require("kickstart.plugins.catppuccin"),
   -- require("kickstart.plugins.gopher"),
   require("kickstart.plugins.lualine"),
-  require("kickstart.plugins.neorg"),
+  -- require("kickstart.plugins.neorg"),
   require("kickstart.plugins.obsidian"),
   require("kickstart.plugins.trouble"),
   { "github/copilot.vim", cmd = { "Copilot" } },
+  require("kickstart.plugins.avante"),
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
@@ -76,6 +77,7 @@ require("lazy").setup({
   require("kickstart.plugins.lint"),
   require("kickstart.plugins.autopairs"),
   require("kickstart.plugins.neo-tree"),
+  require("kickstart.plugins.flutter-tools"),
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
@@ -102,6 +104,11 @@ require("lazy").setup({
       task = "📌",
       lazy = "💤 ",
     },
+  },
+  -- https://www.reddit.com/r/neovim/comments/1nw8luw/comment/nhiwf2p/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
+  rocks = {
+    enabled = false,
+    hererocks = false,
   },
 })
 
