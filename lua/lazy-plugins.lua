@@ -60,8 +60,13 @@ require("lazy").setup({
   -- require("kickstart.plugins.neorg"),
   require("kickstart.plugins.obsidian"),
   require("kickstart.plugins.trouble"),
+
   { "github/copilot.vim", cmd = { "Copilot" } },
-  require("kickstart.plugins.avante"),
+  -- Disable avante for now because of issues with copilot
+  -- https://github.com/yetone/avante.nvim/blob/v0.0.27/README.md?plain=1#L350-L353
+  -- https://github.com/yetone/avante.nvim/issues/1048
+  -- require("kickstart.plugins.avante"),
+  require("kickstart.plugins.copilot-chat"),
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
