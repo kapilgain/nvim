@@ -267,6 +267,9 @@ return {
         -- https://github.com/OmniSharp/omnisharp-roslyn/issues/2574#issuecomment-1757317407
         "omnisharp",
 
+        -- Docker
+        "hadolint",
+
         -- Go
         "delve",
         "goimports-reviser",
