@@ -8,7 +8,7 @@ return {
     build = "make tiktoken",
     cmd = "CopilotChat",
     keys = {
-      { "<leader>at", "<cmd>CopilotChatToggle<cr>", desc = "Toggle Copilot Chat" },
+      -- { "<leader>at", "<cmd>CopilotChatToggle<cr>", desc = "Toggle Copilot Chat" },
     },
     config = function()
       -- https://github.com/CopilotC-Nvim/CopilotChat.nvim?tab=readme-ov-file#chat-key-mappings
