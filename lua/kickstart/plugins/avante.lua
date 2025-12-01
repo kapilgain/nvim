@@ -8,6 +8,9 @@ return {
       or "make",
     -- event = "VeryLazy",
     cmd = { "AvanteAsk", "AvanteToggle" },
+    keys = {
+      { "<leader>at", "<cmd>AvanteToggle<cr>", desc = "Toggle Avante" },
+    },
     version = false, -- Never set this value to "*"! Never!
     ---@module 'avante'
     ---@type avante.Config
