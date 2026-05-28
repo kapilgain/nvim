@@ -5,7 +5,7 @@ return {
     -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
     -- ⚠️ must add this setting! ! !
     build = vim.fn.has("win32") ~= 0 and "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"
-      or "make",
+      or "make BUILD_FROM_SOURCE=true",
     -- event = "VeryLazy",
     cmd = { "AvanteAsk", "AvanteToggle" },
     keys = {
