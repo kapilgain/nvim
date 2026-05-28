@@ -54,7 +54,7 @@ require("lazy").setup({
   "LunarVim/bigfile.nvim",
   "mechatroner/rainbow_csv",
   "mfussenegger/nvim-jdtls",
-  require("kickstart.plugins.catppuccin"),
+  -- require("kickstart.plugins.catppuccin"),
   -- require("kickstart.plugins.gopher"),
   require("kickstart.plugins.lualine"),
   -- require("kickstart.plugins.neorg"),
