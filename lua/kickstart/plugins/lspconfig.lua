@@ -222,6 +222,9 @@ return {
           },
         },
 
+        -- Odin
+        ols = {},
+
         -- Python
         pyright = {},
 
