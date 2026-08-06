@@ -24,6 +24,17 @@ return {
           lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
         }
       end,
+      formatters = {
+        -- https://github.com/DanielGavin/ols#neovim
+        -- Odinfmt gets its configuration from odinfmt.json. It defaults
+        -- writing to stdout but needs to be told to read from stdin.
+        odinfmt = {
+          -- Change where to find the command if it isn't in your path.
+          command = "odinfmt",
+          args = { "-stdin" },
+          stdin = true,
+        },
+      },
       formatters_by_ft = {
         -- Conform can also run multiple formatters sequentially
         c = { "clang-format" },
@@ -36,6 +47,7 @@ return {
         json = { "prettierd", "eslint_d" },
         html = { "prettierd" },
         lua = { "stylua" },
+        odin = { "odinfmt" },
         python = { "ruff", "isort", "black" },
         rust = { "rustfmt" },
         tex = { "tex-fmt" },

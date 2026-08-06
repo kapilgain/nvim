@@ -223,7 +223,12 @@ return {
         },
 
         -- Odin
-        ols = {},
+        -- https://github.com/DanielGavin/ols#neovim
+        ols = {
+          init_options = {
+            checker_args = "-strict-style",
+          },
+        },
 
         -- Python
         pyright = {},
